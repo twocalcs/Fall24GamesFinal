@@ -1,0 +1,73 @@
+\hypertarget{gameapplication_8d}{}\doxysection{source/gameapplication.d File Reference}
+\label{gameapplication_8d}\index{source/gameapplication.d@{source/gameapplication.d}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gameapplication_8d_ac9d37d9c03ec0d33f4e8469056afc8e1}{gameapplication\+::$\sim$this}} ()
+\item 
+void \mbox{\hyperlink{gameapplication_8d_ae6574ee1433226fcda43bf8dcc9555d3}{gameapplication\+::\+Input}} ()
+\item 
+void \mbox{\hyperlink{gameapplication_8d_aea93e782f2fa3d1eab2bf360b91e12bf}{gameapplication\+::\+Update}} ()
+\item 
+void \mbox{\hyperlink{gameapplication_8d_a8e825814407dbcc18e80f3d1a51c04c4}{gameapplication\+::\+Render}} ()
+\item 
+void \mbox{\hyperlink{gameapplication_8d_af345f940bf7779d9a37be3724246d9f4}{gameapplication\+::\+Advance\+Frame}} ()
+\item 
+void \mbox{\hyperlink{gameapplication_8d_a019825c5154b4ae1db1b403c6d596d04}{gameapplication\+::\+Run\+Loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gameapplication_8d_ab56a8736185000fbc7f84d0c0609eb6a}\label{gameapplication_8d_ab56a8736185000fbc7f84d0c0609eb6a}} 
+{\bfseries gameapplication\+::m\+Renderer} = SDL\+\_\+\+Create\+Renderer(m\+Window, -\/1, SDL\+\_\+\+RENDERER\+\_\+\+ACCELERATED)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Alex Schott 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\hypertarget{tanksgc_8d_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{tanksgc_8d_DESCRIPTION}
+Top level Game Application class that manages the game loop and holds the SDL renderer and window 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gameapplication_8d_af345f940bf7779d9a37be3724246d9f4}\label{gameapplication_8d_af345f940bf7779d9a37be3724246d9f4}} 
+\index{gameapplication.d@{gameapplication.d}!AdvanceFrame@{AdvanceFrame}}
+\index{AdvanceFrame@{AdvanceFrame}!gameapplication.d@{gameapplication.d}}
+\doxysubsubsection{\texorpdfstring{AdvanceFrame()}{AdvanceFrame()}}
+{\footnotesize\ttfamily void gameapplication\+::\+Advance\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Main game loop function \mbox{\Hypertarget{gameapplication_8d_ae6574ee1433226fcda43bf8dcc9555d3}\label{gameapplication_8d_ae6574ee1433226fcda43bf8dcc9555d3}} 
+\index{gameapplication.d@{gameapplication.d}!Input@{Input}}
+\index{Input@{Input}!gameapplication.d@{gameapplication.d}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void gameapplication\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handle input events for main game loop \mbox{\Hypertarget{gameapplication_8d_a8e825814407dbcc18e80f3d1a51c04c4}\label{gameapplication_8d_a8e825814407dbcc18e80f3d1a51c04c4}} 
+\index{gameapplication.d@{gameapplication.d}!Render@{Render}}
+\index{Render@{Render}!gameapplication.d@{gameapplication.d}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void gameapplication\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Render all game objects and scenes \mbox{\Hypertarget{gameapplication_8d_a019825c5154b4ae1db1b403c6d596d04}\label{gameapplication_8d_a019825c5154b4ae1db1b403c6d596d04}} 
+\index{gameapplication.d@{gameapplication.d}!RunLoop@{RunLoop}}
+\index{RunLoop@{RunLoop}!gameapplication.d@{gameapplication.d}}
+\doxysubsubsection{\texorpdfstring{RunLoop()}{RunLoop()}}
+{\footnotesize\ttfamily void gameapplication\+::\+Run\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runs game loop until game is exited \mbox{\Hypertarget{gameapplication_8d_aea93e782f2fa3d1eab2bf360b91e12bf}\label{gameapplication_8d_aea93e782f2fa3d1eab2bf360b91e12bf}} 
+\index{gameapplication.d@{gameapplication.d}!Update@{Update}}
+\index{Update@{Update}!gameapplication.d@{gameapplication.d}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void gameapplication\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Detect colisions and update the game objects \mbox{\Hypertarget{gameapplication_8d_ac9d37d9c03ec0d33f4e8469056afc8e1}\label{gameapplication_8d_ac9d37d9c03ec0d33f4e8469056afc8e1}} 
+\index{gameapplication.d@{gameapplication.d}!````~this@{$\sim$this}}
+\index{````~this@{$\sim$this}!gameapplication.d@{gameapplication.d}}
+\doxysubsubsection{\texorpdfstring{$\sim$this()}{~this()}}
+{\footnotesize\ttfamily gameapplication\+::$\sim$this (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free the renderer and window 

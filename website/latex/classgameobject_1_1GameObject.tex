@@ -1,0 +1,159 @@
+\hypertarget{classgameobject_1_1GameObject}{}\doxysection{gameobject\+::Game\+Object Class Reference}
+\label{classgameobject_1_1GameObject}\index{gameobject::GameObject@{gameobject::GameObject}}
+
+
+Main game object Class.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgameobject_1_1GameObject_a75204ba1b7ea86421b12040a0b93ef01}{Add\+Script}} (IScript script)
+\item 
+void \mbox{\hyperlink{classgameobject_1_1GameObject_a25aeb0a030640d7261ae567cb7eec16a}{Add\+Component}} (Component\+Type T, IComponent component)
+\item 
+IComponent \mbox{\hyperlink{classgameobject_1_1GameObject_ab6a7d6e26abf4a8084b5699b5f63cefd}{Get\+Component}} (Component\+Type T)
+\item 
+IComponent \mbox{\hyperlink{classgameobject_1_1GameObject_abd83f17c0e32fbb37b2644216f2176f8}{Get\+Component\+Or\+Die}} (Component\+Type T)
+\item 
+void \mbox{\hyperlink{classgameobject_1_1GameObject_aeb800948ec4660b2a1487ede0882114d}{On\+Colision}} (\mbox{\hyperlink{classgameobject_1_1GameObject}{Game\+Object}} other, SDL\+\_\+\+Rect intersection)
+\item 
+void \mbox{\hyperlink{classgameobject_1_1GameObject_a0a18d16e808e048561df15f19ced992f}{Start}} ()
+\item 
+void \mbox{\hyperlink{classgameobject_1_1GameObject_a4b7f8e353e807b1c65c741d9cf1e9713}{Input}} ()
+\item 
+void \mbox{\hyperlink{classgameobject_1_1GameObject_a938cad3e7dd5d1d8df8a1264b55b1b60}{Update}} ()
+\item 
+void \mbox{\hyperlink{classgameobject_1_1GameObject_a572411188c5269158f5113b89e302b55}{Render}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a6a2c6d03cb7fbbefd5974ff9876d2f7e}\label{classgameobject_1_1GameObject_a6a2c6d03cb7fbbefd5974ff9876d2f7e}} 
+string \mbox{\hyperlink{classgameobject_1_1GameObject_a6a2c6d03cb7fbbefd5974ff9876d2f7e}{m\+Name}}
+\begin{DoxyCompactList}\small\item\em Type of game object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a065fc5ef9e34795f100dcf89bce5665d}\label{classgameobject_1_1GameObject_a065fc5ef9e34795f100dcf89bce5665d}} 
+size\+\_\+t \mbox{\hyperlink{classgameobject_1_1GameObject_a065fc5ef9e34795f100dcf89bce5665d}{m\+ID}}
+\begin{DoxyCompactList}\small\item\em Unique ID of game object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a29523b7f5d8a77f3de7286deb66e8e67}\label{classgameobject_1_1GameObject_a29523b7f5d8a77f3de7286deb66e8e67}} 
+IScript\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classgameobject_1_1GameObject_a29523b7f5d8a77f3de7286deb66e8e67}{m\+Scripts}}
+\begin{DoxyCompactList}\small\item\em List of scripts attached to the game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a7aae935000a052350bd33c981f110aef}\label{classgameobject_1_1GameObject_a7aae935000a052350bd33c981f110aef}} 
+IComponent\mbox{[}Component\+Type\mbox{]} \mbox{\hyperlink{classgameobject_1_1GameObject_a7aae935000a052350bd33c981f110aef}{m\+Components}}
+\begin{DoxyCompactList}\small\item\em List of components attached to the game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main game object Class. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Main game object class that holds all the components and scripts. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a25aeb0a030640d7261ae567cb7eec16a}\label{classgameobject_1_1GameObject_a25aeb0a030640d7261ae567cb7eec16a}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily void gameobject\+::\+Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{Component\+Type}]{T,  }\item[{IComponent}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a component to the game object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The type of component to add. \\
+\hline
+{\em component} & The component to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a75204ba1b7ea86421b12040a0b93ef01}\label{classgameobject_1_1GameObject_a75204ba1b7ea86421b12040a0b93ef01}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!AddScript@{AddScript}}
+\index{AddScript@{AddScript}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{AddScript()}{AddScript()}}
+{\footnotesize\ttfamily void gameobject\+::\+Game\+Object\+::\+Add\+Script (\begin{DoxyParamCaption}\item[{IScript}]{script }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a script component to the game object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & The script to add to the game object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgameobject_1_1GameObject_ab6a7d6e26abf4a8084b5699b5f63cefd}\label{classgameobject_1_1GameObject_ab6a7d6e26abf4a8084b5699b5f63cefd}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily IComponent gameobject\+::\+Game\+Object\+::\+Get\+Component (\begin{DoxyParamCaption}\item[{Component\+Type}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a component from the game object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The type of component to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The component of the specified type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgameobject_1_1GameObject_abd83f17c0e32fbb37b2644216f2176f8}\label{classgameobject_1_1GameObject_abd83f17c0e32fbb37b2644216f2176f8}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!GetComponentOrDie@{GetComponentOrDie}}
+\index{GetComponentOrDie@{GetComponentOrDie}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponentOrDie()}{GetComponentOrDie()}}
+{\footnotesize\ttfamily IComponent gameobject\+::\+Game\+Object\+::\+Get\+Component\+Or\+Die (\begin{DoxyParamCaption}\item[{Component\+Type}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a component from the game object or throw an error if it does not exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The type of component to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The component of the specified type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a4b7f8e353e807b1c65c741d9cf1e9713}\label{classgameobject_1_1GameObject_a4b7f8e353e807b1c65c741d9cf1e9713}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!Input@{Input}}
+\index{Input@{Input}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void gameobject\+::\+Game\+Object\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Called by parent scene to handle input for the game object. calls the input function of each component and script. \mbox{\Hypertarget{classgameobject_1_1GameObject_aeb800948ec4660b2a1487ede0882114d}\label{classgameobject_1_1GameObject_aeb800948ec4660b2a1487ede0882114d}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!OnColision@{OnColision}}
+\index{OnColision@{OnColision}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnColision()}{OnColision()}}
+{\footnotesize\ttfamily void gameobject\+::\+Game\+Object\+::\+On\+Colision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgameobject_1_1GameObject}{Game\+Object}}}]{other,  }\item[{SDL\+\_\+\+Rect}]{intersection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Called when colision is detected between this game object and another. calls the on\+Colision function of each component and script. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The other game object that this game object collided with. \\
+\hline
+{\em intersection} & The SDL\+\_\+\+Rect intersection of the two game objects. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgameobject_1_1GameObject_a572411188c5269158f5113b89e302b55}\label{classgameobject_1_1GameObject_a572411188c5269158f5113b89e302b55}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!Render@{Render}}
+\index{Render@{Render}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void gameobject\+::\+Game\+Object\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Called by parent scene to render the game object. \mbox{\Hypertarget{classgameobject_1_1GameObject_a0a18d16e808e048561df15f19ced992f}\label{classgameobject_1_1GameObject_a0a18d16e808e048561df15f19ced992f}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!Start@{Start}}
+\index{Start@{Start}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void gameobject\+::\+Game\+Object\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Called when the game object is first created. calls the start function of each component and script. \mbox{\Hypertarget{classgameobject_1_1GameObject_a938cad3e7dd5d1d8df8a1264b55b1b60}\label{classgameobject_1_1GameObject_a938cad3e7dd5d1d8df8a1264b55b1b60}} 
+\index{gameobject::GameObject@{gameobject::GameObject}!Update@{Update}}
+\index{Update@{Update}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void gameobject\+::\+Game\+Object\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Called by parent scene to update the game object once per frame. calls the update function of each component and script. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{gameobject_8d}{gameobject.\+d}}\end{DoxyCompactItemize}

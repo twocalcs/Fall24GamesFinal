@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinwoo Kim, Alex Schott, and Max Su present:</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #444;
+        }
+        .video, .screenshots, .documentation, .architecture, .binary, .post-mortem {
+            margin-bottom: 30px;
+        }
+        .screenshots img, .architecture img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Game Project Showcase</h1>
+
+        <!-- Video -->
+        <div class="video">
+            <h2>Game Trailer</h2>
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/Rmjq146NFmw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="screenshots">
+            <h2>Game Screenshots</h2>
+            <img src="tanks.PNG" alt="Tanks!">
+            <img src="tanks2.PNG" alt="More Tanks!">
+            <img src="pong.PNG" alt="Pong!">
+        </div>
+
+        <!-- Documentation -->
+        <div class="documentation">
+            <h2>Documentation</h2>
+            <p>Take a look at our documentation: <a href="html/index.html" target="_blank">Game Engine Documentation</a></p>
+        </div>
+
+        <!-- Architecture -->
+        <div class="architecture">
+            <h2>Here's our Engine Architecture!</h2>
+            <img src="architecture.jpeg" alt="Engine Architecture Diagram">
+        </div>
+
+        <!-- Binary Link -->
+        <div class="binary">
+            <h2>Download the Zip</h2>
+            <p><a href="Engine.zip" download="Engine.zip">Download our Engine! Then you can use ./pong_engine to play our attempt at pong or ./tanks_engine to play our attempt at tanks!</a></p>
+        </div>
+
+        <!-- Post Mortem -->
+        <div class="post-mortem">
+            <h2>Post Mortem</h2>
+    
+            <p>
+                On the game building side, we created a level loader which uses .bmp files to create levels for the game. By encoding each game object as a different color, we could load a game level solely using a pixelated .bmp file. The game controller surveys each pixel of the image, which corresponds to a 16x16 tile in the game window, and spawns an object on that tile depending on the color of the pixel in the image. In addition, we developed a collision detection algorithm using the broad/narrow paradigm, which first groups nearby objects together, then calculates the granular collisions. This greatly improved the performance of our games, especially in the Tank game, which has a lot of projectiles game objects. Looking back, we realize we were a bit too ambitious in choosing a complex game to develop. While the game engine itself works well, diving into the intricate details within a limited timeframe proved challenging. For instance, while collision detection was implemented correctly, the small size of each wall tile made it difficult to ensure bullets bounced in the correct direction after colliding. Additionally, implementing AI for the enemy tanks was more complex than we anticipated. Given another month or two, refining the physics system of our engine would likely be our top priority.
+            </p>
+            <p>
+                Our game engine functions by creating game objects with a component and script design pattern, allowing us to run our game with a game loop that accesses these objects. Our GUI allows the user to create game objects easily, and add the necessary components and scripts. We also created a Python script that automated and expedited the process of converting JSON files into D code containing information about the game scene. Additionally, we were able to implement some helpful and unique developer tools, such as a writeln wrapper that could be toggled on and off for different files, allowing easy debugging during development. Finally, we created a bash script that automatically creates package.d files in every module, allowing us to import multiple files (e.g., components and scripts) in one line of code.
+            </p>
+            <p>
+                In hindsight, we might have misallocated our time by focusing too heavily on the engine design and approaching it from a developer's perspective. While we’re proud of the features we implemented, we could have dedicated more effort to creating a polished game, with menus, GUI elements, and level selectors. While we believe the engine’s source code is rock solid, we may have underestimated the importance of showcasing an outstanding game to highlight its capabilities.
+            </p>
+            <p>
+               The game engine GUI and scene creator, which allows scenes to be built from JSON files, went more smoothly. With additional time, we could have expanded the GUI to include level creation tools, though this felt somewhat redundant since our engine processes levels via bitmaps and there are many tools available for bitmap customization. It would also have been interesting to explore incorporating script-building features directly into the GUI.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

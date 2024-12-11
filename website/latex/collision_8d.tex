@@ -1,0 +1,52 @@
+\hypertarget{collision_8d}{}\doxysection{source/collision.d File Reference}
+\label{collision_8d}\index{source/collision.d@{source/collision.d}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{collision_8d_a3f72e20820a261b3822439389ba5aa9c}{collision\+::detect\+Colisions}} (Scene sc)
+\begin{DoxyCompactList}\small\item\em Detect colision in scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{collision_8d_a7f09cd2bd7fab41584016e0564961470}{collision\+::add\+To\+Grid}} (Game\+Object\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}\mbox{[}10\mbox{]} $\ast$grid, Scene sc)
+\begin{DoxyCompactList}\small\item\em broad phase collision detection \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Alex Schott 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\hypertarget{tanksgc_8d_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{tanksgc_8d_DESCRIPTION}
+Colision detection module that uses broad phase collision detection to optimize performance 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{collision_8d_a7f09cd2bd7fab41584016e0564961470}\label{collision_8d_a7f09cd2bd7fab41584016e0564961470}} 
+\index{collision.d@{collision.d}!addToGrid@{addToGrid}}
+\index{addToGrid@{addToGrid}!collision.d@{collision.d}}
+\doxysubsubsection{\texorpdfstring{addToGrid()}{addToGrid()}}
+{\footnotesize\ttfamily void collision\+::add\+To\+Grid (\begin{DoxyParamCaption}\item[{Game\+Object $\ast$}]{grid\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}\mbox{[}10\mbox{]},  }\item[{Scene}]{sc }\end{DoxyParamCaption})}
+
+
+
+broad phase collision detection 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & grid screen grid which contains all game objects sorted by position \\
+\hline
+{\em sc} & scene to detect colisions in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{collision_8d_a3f72e20820a261b3822439389ba5aa9c}\label{collision_8d_a3f72e20820a261b3822439389ba5aa9c}} 
+\index{collision.d@{collision.d}!detectColisions@{detectColisions}}
+\index{detectColisions@{detectColisions}!collision.d@{collision.d}}
+\doxysubsubsection{\texorpdfstring{detectColisions()}{detectColisions()}}
+{\footnotesize\ttfamily void collision\+::detect\+Colisions (\begin{DoxyParamCaption}\item[{Scene}]{sc }\end{DoxyParamCaption})}
+
+
+
+Detect colision in scene. 
+
+Recursivly loads all game objects in the top level scene and all subsceens, then uses broad phase collision detection to detect colisions between game objects
+
+When a colision is detected, the On\+Colision method is called on both game objects, passing the other game object and the intersection rect 

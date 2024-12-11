@@ -1,0 +1,65 @@
+\hypertarget{debugger_8d}{}\doxysection{source/debugger.d File Reference}
+\label{debugger_8d}\index{source/debugger.d@{source/debugger.d}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{debugger_8d_ad16d66eea5f12a50f4a77c4c1c0def04}{debugger\+::debug\+\_\+write}} (string message, string flag)
+\begin{DoxyCompactList}\small\item\em Modified print function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool\mbox{[}string\mbox{]} \mbox{\hyperlink{debugger_8d_a1b174a9fe980328a1a9c4fa7215edfc3}{debugger\+::\+DEBUG\+\_\+\+ENABLED}}
+\begin{DoxyCompactList}\small\item\em Debug enabled flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Alex Schott 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\hypertarget{tanksgc_8d_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{tanksgc_8d_DESCRIPTION}
+Engine debugger which allows for conditional debug outputs 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{debugger_8d_ad16d66eea5f12a50f4a77c4c1c0def04}\label{debugger_8d_ad16d66eea5f12a50f4a77c4c1c0def04}} 
+\index{debugger.d@{debugger.d}!debug\_write@{debug\_write}}
+\index{debug\_write@{debug\_write}!debugger.d@{debugger.d}}
+\doxysubsubsection{\texorpdfstring{debug\_write()}{debug\_write()}}
+{\footnotesize\ttfamily void debugger\+::debug\+\_\+write (\begin{DoxyParamCaption}\item[{string}]{message,  }\item[{string}]{flag }\end{DoxyParamCaption})}
+
+
+
+Modified print function. 
+
+Debug write function that writes to the console only if the correct debug flag is set 
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to write \\
+\hline
+{\em file} & Debug flag to check \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{debugger_8d_a1b174a9fe980328a1a9c4fa7215edfc3}\label{debugger_8d_a1b174a9fe980328a1a9c4fa7215edfc3}} 
+\index{debugger.d@{debugger.d}!DEBUG\_ENABLED@{DEBUG\_ENABLED}}
+\index{DEBUG\_ENABLED@{DEBUG\_ENABLED}!debugger.d@{debugger.d}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_ENABLED}{DEBUG\_ENABLED}}
+{\footnotesize\ttfamily bool \mbox{[}string\mbox{]} debugger\+::\+DEBUG\+\_\+\+ENABLED}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}resource"{}}: \textcolor{keyword}{true}, \textcolor{stringliteral}{"{}component"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}gameobject"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}scene"{}}: \textcolor{keyword}{false},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}gameapplication"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}script"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}app"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}main"{}}: \textcolor{keyword}{false},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}collision"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}tank"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}bullet"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}loader"{}}: \textcolor{keyword}{false},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}destroy"{}}: \textcolor{keyword}{false}, \textcolor{stringliteral}{"{}collisionmap"{}}: \textcolor{keyword}{false},}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+
+
+Debug enabled flags. 
+

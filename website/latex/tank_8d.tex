@@ -1,0 +1,127 @@
+\hypertarget{tank_8d}{}\doxysection{source/scripts/tank.d File Reference}
+\label{tank_8d}\index{source/scripts/tank.d@{source/scripts/tank.d}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tank_8d_afd1ca8ae8f9fa83fb559582290b03dfd}\label{tank_8d_afd1ca8ae8f9fa83fb559582290b03dfd}} 
+{\bfseries scripts\+::tank\+::if} (state\mbox{[}SDL\+\_\+\+SCANCODE\+\_\+A\mbox{]})
+\item 
+\mbox{\Hypertarget{tank_8d_acc0116752ff755c76d587be2dc66d3a3}\label{tank_8d_acc0116752ff755c76d587be2dc66d3a3}} 
+else {\bfseries scripts\+::tank\+::if} (state\mbox{[}SDL\+\_\+\+SCANCODE\+\_\+D\mbox{]})
+\item 
+\mbox{\Hypertarget{tank_8d_a384b360f8a8a90aa7bca4d47837d074d}\label{tank_8d_a384b360f8a8a90aa7bca4d47837d074d}} 
+{\bfseries scripts\+::tank\+::if} (state\mbox{[}SDL\+\_\+\+SCANCODE\+\_\+W\mbox{]})
+\item 
+\mbox{\Hypertarget{tank_8d_a54eb86a737f87fd31f52ec6d34b9abdb}\label{tank_8d_a54eb86a737f87fd31f52ec6d34b9abdb}} 
+else {\bfseries scripts\+::tank\+::if} (state\mbox{[}SDL\+\_\+\+SCANCODE\+\_\+S\mbox{]})
+\item 
+\mbox{\Hypertarget{tank_8d_a22825f9f1bb2b3f73079ee1ee8ccc574}\label{tank_8d_a22825f9f1bb2b3f73079ee1ee8ccc574}} 
+{\bfseries scripts\+::tank\+::if} (state\mbox{[}SDL\+\_\+\+SCANCODE\+\_\+\+SPACE\mbox{]})
+\item 
+void \mbox{\hyperlink{tank_8d_a88c698790c79a4a583b5ad8d60a90e25}{scripts\+::tank\+::\+Update}} (Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Tank update function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tank_8d_a06a11084657ae08d45285987733af6d0}{scripts\+::tank\+::\+On\+Colision}} (Game\+Object go, Game\+Object other)
+\begin{DoxyCompactList}\small\item\em Tank collision function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto {\bfseries scripts\+::tank\+::pos}
+\item 
+\mbox{\Hypertarget{tank_8d_a871824fd584397015c3e7a8dd57a6829}\label{tank_8d_a871824fd584397015c3e7a8dd57a6829}} 
+ubyte $\ast$ {\bfseries scripts\+::tank\+::state} = SDL\+\_\+\+Get\+Keyboard\+State(null)
+\item 
+{\bfseries scripts\+::tank\+::else}
+\item 
+\mbox{\Hypertarget{tank_8d_a4923de2b1cdb837f20bc36a8d3133895}\label{tank_8d_a4923de2b1cdb837f20bc36a8d3133895}} 
+pos. {\bfseries scripts\+::tank\+::m\+YVelocity} = 0
+\item 
+\mbox{\Hypertarget{tank_8d_a24b2971f852949f21e7f883c8ad6395d}\label{tank_8d_a24b2971f852949f21e7f883c8ad6395d}} 
+int {\bfseries scripts\+::tank\+::x}
+\item 
+\mbox{\Hypertarget{tank_8d_a5ee757d8ba7c886d32cc0a0b6d7adf90}\label{tank_8d_a5ee757d8ba7c886d32cc0a0b6d7adf90}} 
+int {\bfseries scripts\+::tank\+::y}
+\item 
+auto {\bfseries scripts\+::tank\+::angle}
+\item 
+\mbox{\Hypertarget{tank_8d_adb423093f70229ad02562e3350b4a514}\label{tank_8d_adb423093f70229ad02562e3350b4a514}} 
+stack. {\bfseries scripts\+::tank\+::m\+Angles} \mbox{[}1\mbox{]} = angle
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Alex Schott 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\hypertarget{tanksgc_8d_LICENSE}{}\doxysubsection{LICENSE}\label{tanksgc_8d_LICENSE}
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\hypertarget{tanksgc_8d_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{tanksgc_8d_DESCRIPTION}
+Tank script used to control and manage the player tank game object 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tank_8d_a06a11084657ae08d45285987733af6d0}\label{tank_8d_a06a11084657ae08d45285987733af6d0}} 
+\index{tank.d@{tank.d}!OnColision@{OnColision}}
+\index{OnColision@{OnColision}!tank.d@{tank.d}}
+\doxysubsubsection{\texorpdfstring{OnColision()}{OnColision()}}
+{\footnotesize\ttfamily void scripts\+::tank\+::\+On\+Colision (\begin{DoxyParamCaption}\item[{Game\+Object}]{go,  }\item[{Game\+Object}]{other }\end{DoxyParamCaption})}
+
+
+
+Tank collision function. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Detects if the tank has collided with another object or wall, and changes direction if it has \mbox{\Hypertarget{tank_8d_a88c698790c79a4a583b5ad8d60a90e25}\label{tank_8d_a88c698790c79a4a583b5ad8d60a90e25}} 
+\index{tank.d@{tank.d}!Update@{Update}}
+\index{Update@{Update}!tank.d@{tank.d}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void scripts\+::tank\+::\+Update (\begin{DoxyParamCaption}\item[{Game\+Object}]{go }\end{DoxyParamCaption})}
+
+
+
+Tank update function. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Updates the tank position based on velocity, and checks for collisions with walls 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tank_8d_a49b22eb5948a8e47d6046bc63f35e66a}\label{tank_8d_a49b22eb5948a8e47d6046bc63f35e66a}} 
+\index{tank.d@{tank.d}!angle@{angle}}
+\index{angle@{angle}!tank.d@{tank.d}}
+\doxysubsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily auto scripts\+::tank\+::angle}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= atan2(cast(\textcolor{keywordtype}{double}) y -\/ pos.mRect.y -\/ (pos.mRect.h / 2), cast(\textcolor{keywordtype}{double}) x -\/ pos.mRect.x -\/ (}
+\DoxyCodeLine{                pos.mRect.w / 2)) * 180 / PI}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tank_8d_a3d1ff366a933f2bafd7b750429d6194e}\label{tank_8d_a3d1ff366a933f2bafd7b750429d6194e}} 
+\index{tank.d@{tank.d}!else@{else}}
+\index{else@{else}!tank.d@{tank.d}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily scripts\+::tank\+::else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{            pos.mXVelocity = 0}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tank_8d_a8a588da98d54aea6d653afccac269411}\label{tank_8d_a8a588da98d54aea6d653afccac269411}} 
+\index{tank.d@{tank.d}!pos@{pos}}
+\index{pos@{pos}!tank.d@{tank.d}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily auto scripts\+::tank\+::pos}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= cast(CompPositionAttr) go.GetComponent(}
+\DoxyCodeLine{            ComponentType.POSITION\_ATTRIBUTES)}
+
+\end{DoxyCode}

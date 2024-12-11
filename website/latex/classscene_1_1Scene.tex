@@ -1,0 +1,99 @@
+\hypertarget{classscene_1_1Scene}{}\doxysection{scene\+::Scene Class Reference}
+\label{classscene_1_1Scene}\index{scene::Scene@{scene::Scene}}
+
+
+\mbox{\hyperlink{classscene_1_1Scene}{Scene}} Tree class.  
+
+
+
+
+Collaboration diagram for scene\+::Scene\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classscene_1_1Scene_ac2eb61bc0d71c4aaa75233318dedae21}{Update}} ()
+\item 
+void \mbox{\hyperlink{classscene_1_1Scene_a74990b6951d2a2ffb331694914349675}{Render}} ()
+\item 
+void \mbox{\hyperlink{classscene_1_1Scene_a2099a9752183d539458c10a954112a3c}{Input}} ()
+\begin{DoxyCompactList}\small\item\em Calls input on all member game objects and scenes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscene_1_1Scene_a6ac66c76467718c6282642710640ccee}{Start}} ()
+\begin{DoxyCompactList}\small\item\em call start on all member game objects and scenes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscene_1_1Scene_accde133f30c05200cc6f0cbfe6faac13}{Add\+Game\+Object}} (Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Adds a game object to the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classscene_1_1Scene_a9128d5f4bff193407916b14d0a93858b}\label{classscene_1_1Scene_a9128d5f4bff193407916b14d0a93858b}} 
+string \mbox{\hyperlink{classscene_1_1Scene_a9128d5f4bff193407916b14d0a93858b}{m\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classscene_1_1Scene_aa2ae4b30ca7279b08b5b56490e6a79f0}\label{classscene_1_1Scene_aa2ae4b30ca7279b08b5b56490e6a79f0}} 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classscene_1_1Scene_aa2ae4b30ca7279b08b5b56490e6a79f0}{m\+Game\+Objects}}
+\begin{DoxyCompactList}\small\item\em The game objects in the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classscene_1_1Scene_abbd172ac3e48405d02ec5cdc543aef7b}\label{classscene_1_1Scene_abbd172ac3e48405d02ec5cdc543aef7b}} 
+\mbox{\hyperlink{classscene_1_1Scene}{Scene}}\mbox{[}string\mbox{]} \mbox{\hyperlink{classscene_1_1Scene_abbd172ac3e48405d02ec5cdc543aef7b}{m\+Scenes}}
+\begin{DoxyCompactList}\small\item\em The sub scenes in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classscene_1_1Scene}{Scene}} Tree class. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+\mbox{\hyperlink{classscene_1_1Scene}{Scene}} class that holds game objects and sub scenes 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscene_1_1Scene_accde133f30c05200cc6f0cbfe6faac13}\label{classscene_1_1Scene_accde133f30c05200cc6f0cbfe6faac13}} 
+\index{scene::Scene@{scene::Scene}!AddGameObject@{AddGameObject}}
+\index{AddGameObject@{AddGameObject}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{AddGameObject()}{AddGameObject()}}
+{\footnotesize\ttfamily void scene\+::\+Scene\+::\+Add\+Game\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{go }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a game object to the scene. 
+
+Add a game object to the scene 
+\begin{DoxyParams}{Parameters}
+{\em go} & The game object to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classscene_1_1Scene_a2099a9752183d539458c10a954112a3c}\label{classscene_1_1Scene_a2099a9752183d539458c10a954112a3c}} 
+\index{scene::Scene@{scene::Scene}!Input@{Input}}
+\index{Input@{Input}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void scene\+::\+Scene\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calls input on all member game objects and scenes. 
+
+Handle input for the scene \mbox{\Hypertarget{classscene_1_1Scene_a74990b6951d2a2ffb331694914349675}\label{classscene_1_1Scene_a74990b6951d2a2ffb331694914349675}} 
+\index{scene::Scene@{scene::Scene}!Render@{Render}}
+\index{Render@{Render}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void scene\+::\+Scene\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Render the scene @breif Calls render on all member game objects and scenes \mbox{\Hypertarget{classscene_1_1Scene_a6ac66c76467718c6282642710640ccee}\label{classscene_1_1Scene_a6ac66c76467718c6282642710640ccee}} 
+\index{scene::Scene@{scene::Scene}!Start@{Start}}
+\index{Start@{Start}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void scene\+::\+Scene\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+call start on all member game objects and scenes 
+
+Start the scene \mbox{\Hypertarget{classscene_1_1Scene_ac2eb61bc0d71c4aaa75233318dedae21}\label{classscene_1_1Scene_ac2eb61bc0d71c4aaa75233318dedae21}} 
+\index{scene::Scene@{scene::Scene}!Update@{Update}}
+\index{Update@{Update}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void scene\+::\+Scene\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update the scene @breif calls update on all member game objects and scenes 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{scene_8d}{scene.\+d}}\end{DoxyCompactItemize}

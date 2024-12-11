@@ -1,0 +1,87 @@
+\hypertarget{classresource_1_1ResourceManager}{}\doxysection{resource\+::Resource\+Manager Class Reference}
+\label{classresource_1_1ResourceManager}\index{resource::ResourceManager@{resource::ResourceManager}}
+
+
+Game resrouce manager for textures.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classresource_1_1ResourceManager_a2c0917e5200683ad78ed9bf59ced5338}{this}} ()
+\item 
+\mbox{\hyperlink{classresource_1_1ResourceManager_a8dba8ff8addafe5cff3703dea477f35d}{$\sim$this}} ()
+\item 
+void \mbox{\hyperlink{classresource_1_1ResourceManager_aaaa27e021523192f48c158b5d62ebc4c}{Load\+Font}} (string font, int size)
+\item 
+SDL\+\_\+\+Texture $\ast$ \mbox{\hyperlink{classresource_1_1ResourceManager_aa3c68a1c3eda5b47c0237a59d804ab91}{Load\+Static\+Texture}} (string path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classresource_1_1ResourceManager_a517fe995949bb88f6e93739d68438321}\label{classresource_1_1ResourceManager_a517fe995949bb88f6e93739d68438321}} 
+SDL\+\_\+\+Texture $\ast$ \mbox{\hyperlink{classresource_1_1ResourceManager_a517fe995949bb88f6e93739d68438321}{m\+Textures}}
+\begin{DoxyCompactList}\small\item\em Loaded textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classresource_1_1ResourceManager_ae324a49657c461f4d2d9360347a75d8a}\label{classresource_1_1ResourceManager_ae324a49657c461f4d2d9360347a75d8a}} 
+TTF\+\_\+\+Font $\ast$ \mbox{\hyperlink{classresource_1_1ResourceManager_ae324a49657c461f4d2d9360347a75d8a}{m\+Fonts}}
+\begin{DoxyCompactList}\small\item\em Loaded fonts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classresource_1_1ResourceManager_a0ecaac610af46ec91d74e4a106854236}\label{classresource_1_1ResourceManager_a0ecaac610af46ec91d74e4a106854236}} 
+SDL\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{classresource_1_1ResourceManager_a0ecaac610af46ec91d74e4a106854236}{m\+Renderer}}
+\begin{DoxyCompactList}\small\item\em SDL Renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game resrouce manager for textures. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Manages textures by storing loaded textures and detecting if game is trying to load a texture which has already been loaded 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classresource_1_1ResourceManager_a2c0917e5200683ad78ed9bf59ced5338}\label{classresource_1_1ResourceManager_a2c0917e5200683ad78ed9bf59ced5338}} 
+\index{resource::ResourceManager@{resource::ResourceManager}!this@{this}}
+\index{this@{this}!resource::ResourceManager@{resource::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily resource\+::\+Resource\+Manager\+::this (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes SDL fonts \mbox{\Hypertarget{classresource_1_1ResourceManager_a8dba8ff8addafe5cff3703dea477f35d}\label{classresource_1_1ResourceManager_a8dba8ff8addafe5cff3703dea477f35d}} 
+\index{resource::ResourceManager@{resource::ResourceManager}!````~this@{$\sim$this}}
+\index{````~this@{$\sim$this}!resource::ResourceManager@{resource::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$this()}{~this()}}
+{\footnotesize\ttfamily resource\+::\+Resource\+Manager\+::$\sim$this (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Frees all loaded textures and fonts 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classresource_1_1ResourceManager_aaaa27e021523192f48c158b5d62ebc4c}\label{classresource_1_1ResourceManager_aaaa27e021523192f48c158b5d62ebc4c}} 
+\index{resource::ResourceManager@{resource::ResourceManager}!LoadFont@{LoadFont}}
+\index{LoadFont@{LoadFont}!resource::ResourceManager@{resource::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{LoadFont()}{LoadFont()}}
+{\footnotesize\ttfamily void resource\+::\+Resource\+Manager\+::\+Load\+Font (\begin{DoxyParamCaption}\item[{string}]{font,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+load a given font into the game
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size to load the font as \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classresource_1_1ResourceManager_aa3c68a1c3eda5b47c0237a59d804ab91}\label{classresource_1_1ResourceManager_aa3c68a1c3eda5b47c0237a59d804ab91}} 
+\index{resource::ResourceManager@{resource::ResourceManager}!LoadStaticTexture@{LoadStaticTexture}}
+\index{LoadStaticTexture@{LoadStaticTexture}!resource::ResourceManager@{resource::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{LoadStaticTexture()}{LoadStaticTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture$\ast$ resource\+::\+Resource\+Manager\+::\+Load\+Static\+Texture (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Load a single image texture
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the image \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{resource_8d}{resource.\+d}}\end{DoxyCompactItemize}

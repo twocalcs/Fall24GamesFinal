@@ -1,0 +1,60 @@
+\hypertarget{classcomponents_1_1collision_1_1CompCollider}{}\doxysection{components\+::collision\+::Comp\+Collider Class Reference}
+\label{classcomponents_1_1collision_1_1CompCollider}\index{components::collision::CompCollider@{components::collision::CompCollider}}
+
+
+Collider component ~\newline
+  
+
+
+
+
+Inheritance diagram for components\+::collision\+::Comp\+Collider\+:
+% FIG 0
+
+
+Collaboration diagram for components\+::collision\+::Comp\+Collider\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcomponents_1_1collision_1_1CompCollider_adfd2bddfb5e8581c8fe0df0446cf1add}\label{classcomponents_1_1collision_1_1CompCollider_adfd2bddfb5e8581c8fe0df0446cf1add}} 
+mixin {\bfseries IComponent\+Default} ()
+\item 
+\mbox{\hyperlink{classcomponents_1_1collision_1_1CompCollider_a75b79bf2dfecbe87b85b4239c9ec8bc4}{this}} (bool is\+Static=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcomponents_1_1collision_1_1CompCollider_a174c1ba717a2b2b0f0040febb2993e39}\label{classcomponents_1_1collision_1_1CompCollider_a174c1ba717a2b2b0f0040febb2993e39}} 
+bool {\bfseries m\+Is\+Static}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collider component ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Signals to Game\+Application that this object should be checked for collisions, and allows for static and dynamic objects 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcomponents_1_1collision_1_1CompCollider_a75b79bf2dfecbe87b85b4239c9ec8bc4}\label{classcomponents_1_1collision_1_1CompCollider_a75b79bf2dfecbe87b85b4239c9ec8bc4}} 
+\index{components::collision::CompCollider@{components::collision::CompCollider}!this@{this}}
+\index{this@{this}!components::collision::CompCollider@{components::collision::CompCollider}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily components\+::collision\+::\+Comp\+Collider\+::this (\begin{DoxyParamCaption}\item[{bool}]{is\+Static = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new collider component.
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Static} & Whether the collider should be static or dynamic. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/components/\mbox{\hyperlink{components_2collision_8d}{collision.\+d}}\end{DoxyCompactItemize}

@@ -1,0 +1,185 @@
+\hypertarget{tanksgc_8d}{}\doxysection{source/scripts/tanksgc.d File Reference}
+\label{tanksgc_8d}\index{source/scripts/tanksgc.d@{source/scripts/tanksgc.d}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tanksgc_8d_ac822d56801236982d6cda32c13bcd4f8}\label{tanksgc_8d_ac822d56801236982d6cda32c13bcd4f8}} 
+{\bfseries scripts\+::tanksgc\+::assert} (sceneref !is null, \char`\"{}Scene\+Ref component not found\char`\"{})
+\item 
+\mbox{\Hypertarget{tanksgc_8d_ab5618ade232765f42573f9ef5d18f5bb}\label{tanksgc_8d_ab5618ade232765f42573f9ef5d18f5bb}} 
+{\bfseries scripts\+::tanksgc\+::writeln} (enemy\+\_\+count)
+\item 
+void \mbox{\hyperlink{tanksgc_8d_a2c75fb9eb5b4e2433ddc71aea5fb94d6}{scripts\+::tanksgc\+::\+Start}} (Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Game controller start function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tanksgc_8d_acd70e3c07e41bc64522895082a306c6c}{scripts\+::tanksgc\+::\+Update}} (Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Game controller update function. \end{DoxyCompactList}\item 
+int\mbox{[}3\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{tanksgc_8d_acc032d9f441abf112ad73016a52434c9}{scripts\+::tanksgc\+::get\+Pixels\+RGB}} (string filename)
+\begin{DoxyCompactList}\small\item\em Load level bmp file. \end{DoxyCompactList}\item 
+Scene \mbox{\hyperlink{tanksgc_8d_a8de9c469bd23faa352d05e42e2cf45ab}{scripts\+::tanksgc\+::load\+\_\+level}} (string filename)
+\begin{DoxyCompactList}\small\item\em Game controller input function. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{tanksgc_8d_aabc445e73b77318ee59e9f74a5ddbb66}{scripts\+::tanksgc\+::create\+Tank}} (string type, int x, int y, string sprite, int speed, int bullet\+Type, Scene s)
+\begin{DoxyCompactList}\small\item\em Tank game object factory. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{tanksgc_8d_aa429de2ea91f8265ee2ca8663b3384ea}{scripts\+::tanksgc\+::create\+Sand}} (int x, int y, int tile\+Size)
+\begin{DoxyCompactList}\small\item\em Sand game object factory. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{tanksgc_8d_ae889f67091a81c4c1ff76929b59eb6f5}{scripts\+::tanksgc\+::create\+Wall}} (int x, int y, int tile\+Size)
+\begin{DoxyCompactList}\small\item\em Wall game object factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tanksgc_8d_aff2e65a4d8244d7c7175743b68554bb3}\label{tanksgc_8d_aff2e65a4d8244d7c7175743b68554bb3}} 
+auto {\bfseries scripts\+::tanksgc\+::sceneref} = cast(Comp\+Scene\+Ref) go.\+Get\+Component(Component\+Type.\+SCENE\+\_\+\+REF)
+\item 
+\mbox{\Hypertarget{tanksgc_8d_a5d564f1dec079e4090120f513ef26a5e}\label{tanksgc_8d_a5d564f1dec079e4090120f513ef26a5e}} 
+sceneref.\+m\+Scene. {\bfseries scripts\+::tanksgc\+::m\+Scenes} \mbox{[}\char`\"{}level\char`\"{}\mbox{]} = s
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Alex Schott 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\hypertarget{tanksgc_8d_LICENSE}{}\doxysubsection{LICENSE}\label{tanksgc_8d_LICENSE}
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\hypertarget{tanksgc_8d_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{tanksgc_8d_DESCRIPTION}
+Game controller for tank game 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tanksgc_8d_aa429de2ea91f8265ee2ca8663b3384ea}\label{tanksgc_8d_aa429de2ea91f8265ee2ca8663b3384ea}} 
+\index{tanksgc.d@{tanksgc.d}!createSand@{createSand}}
+\index{createSand@{createSand}!tanksgc.d@{tanksgc.d}}
+\doxysubsubsection{\texorpdfstring{createSand()}{createSand()}}
+{\footnotesize\ttfamily Game\+Object scripts\+::tanksgc\+::create\+Sand (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{tile\+Size }\end{DoxyParamCaption})}
+
+
+
+Sand game object factory. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Creates a new sand game object at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of the sand tile \\
+\hline
+{\em y} & Y position of the sand tile \\
+\hline
+{\em tile\+Size} & Size of the sand tile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tanksgc_8d_aabc445e73b77318ee59e9f74a5ddbb66}\label{tanksgc_8d_aabc445e73b77318ee59e9f74a5ddbb66}} 
+\index{tanksgc.d@{tanksgc.d}!createTank@{createTank}}
+\index{createTank@{createTank}!tanksgc.d@{tanksgc.d}}
+\doxysubsubsection{\texorpdfstring{createTank()}{createTank()}}
+{\footnotesize\ttfamily Game\+Object scripts\+::tanksgc\+::create\+Tank (\begin{DoxyParamCaption}\item[{string}]{type,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{string}]{sprite,  }\item[{int}]{speed,  }\item[{int}]{bullet\+Type,  }\item[{Scene}]{s }\end{DoxyParamCaption})}
+
+
+
+Tank game object factory. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Creates a new tank game object with the specified attributes 
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of tank (player or enemy) \\
+\hline
+{\em x} & X position of the tank \\
+\hline
+{\em y} & Y position of the tank \\
+\hline
+{\em sprite} & Path to the tank sprite \\
+\hline
+{\em speed} & Speed of the tank \\
+\hline
+{\em bullet\+Type} & Type of bullet the tank shoots \\
+\hline
+{\em s} & Scene the tank is in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tanksgc_8d_ae889f67091a81c4c1ff76929b59eb6f5}\label{tanksgc_8d_ae889f67091a81c4c1ff76929b59eb6f5}} 
+\index{tanksgc.d@{tanksgc.d}!createWall@{createWall}}
+\index{createWall@{createWall}!tanksgc.d@{tanksgc.d}}
+\doxysubsubsection{\texorpdfstring{createWall()}{createWall()}}
+{\footnotesize\ttfamily Game\+Object scripts\+::tanksgc\+::create\+Wall (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{tile\+Size }\end{DoxyParamCaption})}
+
+
+
+Wall game object factory. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Create a new wall game object at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of the wall tile \\
+\hline
+{\em y} & Y position of the wall tile \\
+\hline
+{\em tile\+Size} & Size of the wall tile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tanksgc_8d_acc032d9f441abf112ad73016a52434c9}\label{tanksgc_8d_acc032d9f441abf112ad73016a52434c9}} 
+\index{tanksgc.d@{tanksgc.d}!getPixelsRGB@{getPixelsRGB}}
+\index{getPixelsRGB@{getPixelsRGB}!tanksgc.d@{tanksgc.d}}
+\doxysubsubsection{\texorpdfstring{getPixelsRGB()}{getPixelsRGB()}}
+{\footnotesize\ttfamily int \mbox{[}3\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} scripts\+::tanksgc\+::get\+Pixels\+RGB (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Load level bmp file. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Loads a game level from a bmp file using colors to determine the type of object to spawn in each location 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the level bmp file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tanksgc_8d_a8de9c469bd23faa352d05e42e2cf45ab}\label{tanksgc_8d_a8de9c469bd23faa352d05e42e2cf45ab}} 
+\index{tanksgc.d@{tanksgc.d}!load\_level@{load\_level}}
+\index{load\_level@{load\_level}!tanksgc.d@{tanksgc.d}}
+\doxysubsubsection{\texorpdfstring{load\_level()}{load\_level()}}
+{\footnotesize\ttfamily Scene scripts\+::tanksgc\+::load\+\_\+level (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Game controller input function. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+Load a game level from a bmp file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the level bmp file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tanksgc_8d_a2c75fb9eb5b4e2433ddc71aea5fb94d6}\label{tanksgc_8d_a2c75fb9eb5b4e2433ddc71aea5fb94d6}} 
+\index{tanksgc.d@{tanksgc.d}!Start@{Start}}
+\index{Start@{Start}!tanksgc.d@{tanksgc.d}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void scripts\+::tanksgc\+::\+Start (\begin{DoxyParamCaption}\item[{Game\+Object}]{go }\end{DoxyParamCaption})}
+
+
+
+Game controller start function. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+On game start, load the first level \mbox{\Hypertarget{tanksgc_8d_acd70e3c07e41bc64522895082a306c6c}\label{tanksgc_8d_acd70e3c07e41bc64522895082a306c6c}} 
+\index{tanksgc.d@{tanksgc.d}!Update@{Update}}
+\index{Update@{Update}!tanksgc.d@{tanksgc.d}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void scripts\+::tanksgc\+::\+Update (\begin{DoxyParamCaption}\item[{Game\+Object}]{go }\end{DoxyParamCaption})}
+
+
+
+Game controller update function. 
+
+\begin{DoxyAuthor}{Author}
+Alex Schott
+\end{DoxyAuthor}
+If all enemies are destroyed, load the next level 

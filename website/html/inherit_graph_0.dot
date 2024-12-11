@@ -1,0 +1,16 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="IComponent",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="components::collision\l::CompCollider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcomponents_1_1collision_1_1CompCollider.html",tooltip="Collider component"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="components::flag::CompFlag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcomponents_1_1flag_1_1CompFlag.html",tooltip="Flag component."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="components::positionattr\l::CompPositionAttr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcomponents_1_1positionattr_1_1CompPositionAttr.html",tooltip="Position component."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="components::simplemovement\l::CompSimpleMovement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcomponents_1_1simplemovement_1_1CompSimpleMovement.html",tooltip="Simple movement component."];
+}
